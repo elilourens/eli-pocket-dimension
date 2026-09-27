@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "leash": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": { "items": "minecraft:lead", "predicates": { "minecraft:custom_data": { "pocket_key": true } } }
+      }
+    }
+  },
+  "rewards": { "function": "pocket:capture/start" }
+}

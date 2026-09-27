@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": { "items": "minecraft:lead", "predicates": { "minecraft:custom_data": { "pocket_key": true } } }
+      }
+    }
+  },
+  "rewards": { "function": "pocket:use_key" }
+}
