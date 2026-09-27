@@ -15,6 +15,9 @@ execute as @e[type=player,scores={pocket.deaths=1..}] run function pocket:util/r
 execute as @e[type=player,scores={pocket.fxm=1..}] at @s run function pocket:fx/step
 execute as @a[tag=pocket.entering] run function pocket:try_enter
 
+# No nether/end portals in the pocket
+execute as @e[type=player] at @s if dimension pocket:pocket run function pocket:util/no_portals
+
 # Ambient pocket effects every other tick
 scoreboard players add #t pocket.tmp 1
 scoreboard players operation #m pocket.tmp = #t pocket.tmp
